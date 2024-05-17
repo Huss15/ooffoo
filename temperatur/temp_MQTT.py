@@ -96,5 +96,6 @@ class Temp_MQTT:
                 elif(temperatur >= self.ledPhase.RED):
                     self.multiLedCtrl.red()
         except KeyboardInterrupt:
+            self.multiLedCtrl.clear()
             print("") # <--- To make it look better in the console 
             print("End temperature sensor")

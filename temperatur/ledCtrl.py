@@ -16,7 +16,7 @@ class MultiLedCtrl:
                 GPIO.output(self.greenLED,GPIO.HIGH)
                 GPIO.output(self.blueLED,GPIO.HIGH)
             except KeyboardInterrupt:
-                GPIO.cleanup() 
+                self.clear()
 
         def green(self):
             try:
@@ -24,7 +24,7 @@ class MultiLedCtrl:
                 GPIO.output(self.greenLED,GPIO.LOW)
                 GPIO.output(self.blueLED,GPIO.HIGH)
             except KeyboardInterrupt:
-                GPIO.cleanup() 
+                self.clear() 
 
         
         def lightBlue(self):
@@ -33,7 +33,7 @@ class MultiLedCtrl:
                 GPIO.output(self.greenLED,GPIO.LOW)
                 GPIO.output(self.blueLED,GPIO.LOW)
             except KeyboardInterrupt:
-                GPIO.cleanup() 
+               self.clear()
         
         def yellow(self):
             try:
@@ -41,4 +41,7 @@ class MultiLedCtrl:
                 GPIO.output(self.greenLED,GPIO.LOW)
                 GPIO.output(self.blueLED,GPIO.HIGH)
             except KeyboardInterrupt:
-                GPIO.cleanup() 
+                self.clear()
+                
+        def clear(self):
+            GPIO.cleanup()
