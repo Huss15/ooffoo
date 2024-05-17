@@ -99,3 +99,6 @@ class Temp_MQTT:
             self.multiLedCtrl.clear()
             print("") # <--- To make it look better in the console 
             print("End temperature sensor")
+        except Exception  as e:
+            self.multiLedCtrl.clear()
+            print(e)
