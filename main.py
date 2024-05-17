@@ -1,13 +1,5 @@
-# save this as app.py
-from flask import Flask
+from temperatur.temp_MQTT import Temp_MQTT
 
-app = Flask(__name__)
-
-
-@app.route("/")
-def hello():
-    return "Tomate"
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__=="__main__": 
+   temp =  Temp_MQTT()
+   temp.startTemperatur()
